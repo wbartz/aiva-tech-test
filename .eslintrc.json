@@ -1,0 +1,59 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:unicorn/recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["simple-import-sort", "react"],
+  "rules": {
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "unicorn/no-array-callback-reference": "off",
+    "unicorn/prefer-global-this": "off",
+    "unicorn/no-document-cookie": "off",
+    "unicorn/no-array-for-each": "off",
+    "unicorn/no-array-reduce": "off",
+    "unicorn/explicit-length-check": "off",
+    "eslint-plugin-import/named": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "import/named": "off",
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        "allowList": {
+          "e2e": true
+        },
+        "replacements": {
+          "props": false,
+          "ref": false,
+          "params": false
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "eslint-plugin-import/named": "off",
+        "unicorn/prefer-global-this": "off",
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": ["*.test.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+      "rules": {
+        "unicorn/prefer-module": "off",
+        "eslint-plugin-import/named": "off",
+        "unicorn/prefer-global-this": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "react/display-name": "off",
+        "@next/next/no-img-element": "off",
+        "jsx-a11y/alt-text": "off",
+        "unicorn/no-null": "off"
+      }
+    }
+  ]
+}
