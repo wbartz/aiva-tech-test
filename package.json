@@ -114,6 +114,7 @@
     "start": "next start",
     "test": "jest --passWithNoTests --silent",
     "test:coverage": "jest --coverage --passWithNoTests --silent",
+    "test:e2e": "playwright test --config=playwright.config.ts --reporter=list --project=\"Desktop Chrome\"",
     "test:watch": "jest --watchAll --passWithNoTests --silent",
     "type-check": "tsc -b"
   },

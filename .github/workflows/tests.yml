@@ -30,6 +30,9 @@ jobs:
       - name: 🔬 Run tests
         run: npm run test
 
+      - name: 📥 Install playwright dependencies
+        run: npx playwright install-deps
+
       - name: ⏯️ Run Playwright E2E tests
         run: npx playwright test
         env:
