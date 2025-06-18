@@ -67,15 +67,6 @@ export default function UserNav() {
 
           <DropdownMenuSeparator />
 
-          <DropdownMenuGroup>
-            <DropdownMenuItem className="cursor-pointer" asChild>
-              <Link href="/perfil">
-                <UserPen />
-                Profile
-              </Link>
-            </DropdownMenuItem>
-          </DropdownMenuGroup>
-          <DropdownMenuSeparator />
           <DropdownMenuItem
             className="cursor-pointer"
             onClick={() => signOut()}
