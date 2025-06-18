@@ -7,13 +7,13 @@ import Carrousel from './components/carrousel'
 import RelatedProducts from './components/related'
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export default async function ProductPage({ params }: Props) {
-  const productId = params.slug
+  const { slug: productId } = await params
   const product = await fetcher(`products/slug/${productId}`)
 
   return (

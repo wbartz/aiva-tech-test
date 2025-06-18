@@ -2,6 +2,8 @@
 
 > **Desafio front-end adaptado para Next.js + Fake Store API**
 
+> **<https://aiva-tech-test-5osupahcb-wbartz-projects.vercel.app>**
+
 ## Documentação da API
 
 > https://fakeapi.platzi.com/en/about/introduction/

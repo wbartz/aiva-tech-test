@@ -29,3 +29,8 @@ jobs:
 
       - name: 🔬 Run tests
         run: npm run test
+
+      - name: ⏯️ Run Playwright E2E tests
+        run: npx playwright test
+        env:
+          CI: true

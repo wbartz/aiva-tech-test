@@ -1,5 +1,5 @@
 import { Filter } from 'lucide-react'
-import { use } from 'react'
+import { Suspense, use } from 'react'
 
 import Header from '@/components/header'
 import { Button } from '@/components/ui/button'
@@ -30,7 +30,9 @@ export default function HomeLayout({
           <div className="flex gap-6">
             <aside className="hidden lg:block w-64 shrink-0">
               <div className="sticky top-24 bg-card rounded-lg border p-6">
-                <CategoriesFilter categories={categories} />
+                <Suspense>
+                  <CategoriesFilter categories={categories} />
+                </Suspense>
               </div>
             </aside>
 
@@ -48,7 +50,9 @@ export default function HomeLayout({
                     <SheetTitle>Filter Products</SheetTitle>
                   </SheetHeader>
                   <div className="mt-6">
-                    <CategoriesFilter categories={categories} />
+                    <Suspense>
+                      <CategoriesFilter categories={categories} />
+                    </Suspense>
                   </div>
                 </SheetContent>
               </Sheet>
